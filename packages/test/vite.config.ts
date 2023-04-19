@@ -31,7 +31,7 @@ export default defineConfig({
     build: {
       minify: false,
       lib: {
-        entry: 'src/index.ts',
+        entry: 'src/main.ts',
         fileName: '[name]',
         formats: ['es', 'cjs']
       },

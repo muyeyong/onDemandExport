@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite -c vite.dev.config.ts --open",
-    "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",

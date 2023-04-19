@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { MyInput } from '@/index';
+
 </script>
 
 <template>
@@ -7,6 +9,7 @@
 
     <div class="wrapper">
      <MyButton></MyButton>
+     <MyInput />
 
     </div>
   </header>
