@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "on-demandexport-components",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "antd-vue": "^1.1.7"
+    "antd-vue": "^1.1.7",
+    "vite-plugin-dts": "^2.3.0"
   }
 }

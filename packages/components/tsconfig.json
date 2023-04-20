@@ -1,13 +1,21 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "example/*.d.ts", "example/**/*", "example/**/*.vue"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"
+  ],
+  "emitDeclarationOnly": true, // 只输出声明文件(ts 产物)
+  "declaration": true, // 自动生成声明文件
+  "declarationDir": "dist", // 声明文件生成的目录
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-
   "references": [
     {
       "path": "./tsconfig.node.json"
