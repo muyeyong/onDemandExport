@@ -1,8 +1,9 @@
 {
-  "name": "on-demandexport-components",
+  "name": "on-demandExport-components",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
     "build-only": "vite build",
     "build": "run-p build-only",
