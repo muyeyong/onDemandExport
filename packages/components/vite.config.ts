@@ -75,16 +75,18 @@ export default defineConfig({
       minify: false,
       outDir: 'lib',
       lib: {
-        entry: ['src/component/myButton/index.ts', 'src/component/myInput/index.ts'],
+        entry: './index.ts',
         fileName: '[name]',
-        formats: ['es', 'cjs']
+        formats: ['es', 'cjs'],
+        name: 'MyComponent'
       },
       rollupOptions: {
         external: ['cheerio', 'vue', 'vue-router'],
+        input: ['src/index.ts'],
         output: {
           globals: {
             vue: 'Vue'
-          }
+          },
         }
       }
     },
