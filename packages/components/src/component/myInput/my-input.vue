@@ -9,6 +9,7 @@
 </script>
     
 <style scoped>
+@import url('./input.css');
     .myInput {
         margin: 10px;
         background-color: pink;

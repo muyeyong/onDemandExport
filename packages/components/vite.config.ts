@@ -87,6 +87,9 @@ export default defineConfig({
           globals: {
             vue: 'Vue'
           },
+          chunkFileNames: 'static/js1/[name]-[hash].js',
+          entryFileNames: 'static/js2/[name]-[hash].js',
+          assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
         }
       }
     },
