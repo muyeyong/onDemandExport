@@ -5,3 +5,5 @@ export const componentPath = resolve(__dirname, '../../');
 
 // packages根目录
 export const pkgPath = resolve(__dirname, '../../../');
+
+export const stayFile = ['package.json', 'README.md']

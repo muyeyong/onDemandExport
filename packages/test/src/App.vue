@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { MyButton } from 'on-demandExport-components';
 
 
 </script>

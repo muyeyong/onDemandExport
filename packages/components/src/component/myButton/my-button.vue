@@ -11,5 +11,5 @@ console.log("MyButton")
 </script>
     
 <style scoped>
-   @import url('./button.css');
+   @import url('./button.less');
 </style>

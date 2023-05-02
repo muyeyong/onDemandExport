@@ -13,6 +13,7 @@ export const removeDist = () => {
 
 // 打包样式
 export const buildStyle = () => {
+  console.log('buildStyle buildStyle buildStyle')
   return src(`${componentPath}/src/**/**/*.less`)
     .pipe(less())
     .pipe(autoprefixer())

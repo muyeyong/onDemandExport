@@ -1,12 +1,13 @@
 {
-  "name": "on-demandExport-components",
+  "name": "@XY/components",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "hope/h/packages/components/src/index.mjs",
+  "type": "module",
   "scripts": {
     "build-only": "vite build",
     "build": "run-p build-only",
-    "build:lib": "gulp  script/build/index.ts",
+    "build:lib": "gulp -f script/build/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
