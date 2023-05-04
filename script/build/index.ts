@@ -13,12 +13,11 @@ export const removeDist = () => {
 
 // 打包样式
 export const buildStyle = () => {
-  console.log('buildStyle buildStyle buildStyle')
   return src(`${componentPath}/src/**/**/*.less`)
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(dest(`${componentPath}/hope/lib/src`))
-    .pipe(dest(`${componentPath}/hope/h/src`));
+    .pipe(dest(`${componentPath}/hope/lib/style`))
+    .pipe(dest(`${componentPath}/hope/h/style`));
 };
 
 // 打包组件
@@ -29,7 +28,8 @@ export const buildComponent = async () => {
 export default series(
   async () => removeDist(),
   parallel(
-    async () => buildComponent(),
-    async () => buildStyle()
+    async () => buildStyle(),
+    async () => buildComponent()
+   
   )
 );

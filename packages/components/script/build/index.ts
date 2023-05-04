@@ -16,8 +16,8 @@ export const buildStyle = () => {
   return src(`${componentPath}/src/**/**/*.less`)
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(dest(`${componentPath}/hope/lib/src`))
-    .pipe(dest(`${componentPath}/hope/h/src`));
+    .pipe(dest(`${componentPath}/hope/lib`))
+    .pipe(dest(`${componentPath}/hope/h`));
 };
 
 // 打包组件
