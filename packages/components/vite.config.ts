@@ -11,39 +11,6 @@ import dts from 'vite-plugin-dts'
 
 const resolve = (dir: string) => path.join(__dirname, '../', dir);
 
-function upperCastedLine(str: string) {
-  let temp = str.replace(/[A-Z]/g, function (match) {
-    return "-" + match.toLowerCase();
-  });
-  if (temp.slice(0, 1) === '-') {
-    temp = temp.slice(1);
-  }
-  return temp;
-}
-
-function getComponentEntries(path: string) {
-  const absolutePath = resolve(path)
-  const files = fs.readdirSync(absolutePath);
-  const componentEntries = files.reduce((fileObj: any, item) => {
-    //  文件路径
-    const itemPath = join(absolutePath, item);
-    //  在文件夹中
-    const isDir = fs.statSync(itemPath).isDirectory();
-    const [name, suffix] = item.split('.');
-  
-    //  文件中的入口文件
-    if (isDir) {
-      fileObj[upperCastedLine(item)] = resolve(join(itemPath, 'index.ts'))
-    }
-    //  文件夹外的入口文件
-    else if (suffix === "js") {
-      fileObj[name] = resolve(`${itemPath}`);
-    }
-    return fileObj
-  }, {});
-  
-  return componentEntries;
-}
 
 // console.log('233', getComponentEntries('components/src/component'))
 
@@ -55,7 +22,7 @@ export default defineConfig({
     VueSetupExtend(),
     dts({
       entryRoot: './src',
-      outputDir: ['./hope/h/src', './hope/lib/src'],
+      outputDir: ['./hope/h/type', './hope/lib/type'],
       //指定使用的tsconfig.json为我们整个项目根目录下，如果不配置，你也可以在components下新建tsconfig.json
     }),
     {

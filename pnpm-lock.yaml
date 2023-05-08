@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@XY/components': workspace:^1.0.0
       '@rushstack/eslint-patch': ^1.2.0
+      '@types/fs-extra': ^11.0.1
       '@types/gulp': ^4.0.10
       '@types/gulp-autoprefixer': ^0.0.33
       '@types/gulp-less': ^0.0.32
@@ -17,6 +18,7 @@ importers:
       ant-design-vue: ^3.2.17
       eslint: ^8.34.0
       eslint-plugin-vue: ^9.9.0
+      fs-extra: ^11.1.1
       gulp: ^4.0.2
       gulp-autoprefixer: ^8.0.0
       gulp-less: ^5.0.0
@@ -39,6 +41,7 @@ importers:
     devDependencies:
       '@XY/components': link:packages/components
       '@rushstack/eslint-patch': 1.2.0
+      '@types/fs-extra': 11.0.1
       '@types/gulp': 4.0.10
       '@types/gulp-autoprefixer': 0.0.33
       '@types/gulp-less': 0.0.32
@@ -50,6 +53,7 @@ importers:
       ant-design-vue: 3.2.17_vue@3.2.47
       eslint: 8.38.0
       eslint-plugin-vue: 9.10.0_eslint@8.38.0
+      fs-extra: 11.1.1
       gulp: 4.0.2
       gulp-autoprefixer: 8.0.0_gulp@4.0.2
       gulp-less: 5.0.0
@@ -601,6 +605,13 @@ packages:
     resolution: {integrity: sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==}
     dev: true
 
+  /@types/fs-extra/11.0.1:
+    resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
+    dependencies:
+      '@types/jsonfile': 6.1.1
+      '@types/node': 18.15.11
+    dev: true
+
   /@types/glob-stream/6.1.2:
     resolution: {integrity: sha512-EIJSLP/nGyMzD8aFhJljO9nv3EmQ10xk1+dl+i15AITrcWLhhTTPmNMFK0TWcGRvVYuSlA1VPi1fe8tbgDsUhg==}
     dependencies:
@@ -637,6 +648,12 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
+    dev: true
+
+  /@types/jsonfile/6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.15.11
     dev: true
 
   /@types/minimatch/5.1.2:
@@ -2614,6 +2631,15 @@ packages:
       universalify: 2.0.0
     dev: false
 
+  /fs-extra/11.1.1:
+    resolution: {integrity: sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==}
+    engines: {node: '>=14.14'}
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.1.0
+      universalify: 2.0.0
+    dev: true
+
   /fs-extra/7.0.1:
     resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
     engines: {node: '>=6 <7 || >=8'}
@@ -3465,7 +3491,6 @@ packages:
       universalify: 2.0.0
     optionalDependencies:
       graceful-fs: 4.2.11
-    dev: false
 
   /just-debounce/1.1.0:
     resolution: {integrity: sha512-qpcRocdkUmf+UTNBYx5w6dexX5J31AKK1OmPwH630a83DdVVUIngk55RSAiIGpQyoH0dlr872VHfPjnQnK1qDQ==}
@@ -5219,7 +5244,6 @@ packages:
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
-    dev: false
 
   /unplugin-vue-components/0.24.1_vue@3.2.47:
     resolution: {integrity: sha512-T3A8HkZoIE1Cja95xNqolwza0yD5IVlgZZ1PVAGvVCx8xthmjsv38xWRCtHtwl+rvZyL9uif42SRkDGw9aCfMA==}
