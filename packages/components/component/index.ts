@@ -1,5 +1,5 @@
-import MyButton from './component/myButton'
-import MyInput from './component/myInput'
+import MyButton from './myButton'
+import MyInput from './myInput'
 import type { App } from 'vue'
 
 

@@ -2,8 +2,8 @@
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": [
     "env.d.ts",
-    "src/**/*",
-    "src/**/*.vue",
+    "component/**/*",
+    "component/**/*.vue",
     "script/**/*.ts"
   ],
   // "emitDeclarationOnly": true, // 只输出声明文件(ts 产物)
