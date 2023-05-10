@@ -40,20 +40,6 @@ const copyTypes = () => {
   })
 }
 
-const copyStyle = () => {
-  return new Promise((resolve, reject) => {
-    try {
-      fse.copySync(join(componentPath, 'hope', 'lib', 'style', 'component'), join(componentPath, 'hope', 'lib', 'style'))
-      fse.removeSync(join(componentPath, 'hope', 'lib', 'style', 'component'))
-      // fse.copySync(`${componentPath}/hope/h/style/component`, `${componentPath}/hope/h/style`)
-      // fse.removeSync(`${componentPath}/hope/h/style/component`)
-      resolve(true)
-    } catch (error) {
-      reject(error)
-    }
-  })
-}
-
 const rename = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

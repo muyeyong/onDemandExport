@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
-import fs from 'fs'
-import path, { join } from 'path'
+import { globSync } from 'glob'
+import path from 'node:path';
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -8,12 +8,6 @@ import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import dts from 'vite-plugin-dts'
-
-const resolve = (dir: string) => path.join(__dirname, '../', dir)
-
-// console.log('233', getComponentEntries('components/src/component'))
-
-// https://vitejs.dev/config/
 
 export default defineConfig({
   plugins: [
@@ -60,16 +54,19 @@ export default defineConfig({
   ],
   build: {
     minify: false,
-    outDir: 'lib',
+    outDir: './hope',
     lib: {
-      entry: './component/index.ts'
-      // fileName: '[name]',
-      // formats: ['es', 'cjs'],
-      // name: '@XY/components'
+      entry: './component/index.ts',
     },
     rollupOptions: {
       external: ['cheerio', 'vue', 'vue-router'],
-      input: ['component/index.ts'],
+      input: Object.fromEntries(globSync(['component/**/*.ts', 'component/*.ts']).map(file => [
+        path.relative(
+          'component',
+          file.slice(0, file.length - path.extname(file).length)
+        ),
+        fileURLToPath(new URL(file, import.meta.url))
+      ])),
       output: [
         {
           // 打包格式
@@ -77,7 +74,7 @@ export default defineConfig({
           // 打包后文件名
           entryFileNames: '[name].mjs',
           // 让打包目录和我们的组件库目录对应
-          preserveModules: true,
+          // preserveModules: true,
           exports: 'named',
           // 配置打包根目录
           dir: './hope/h/lib'
@@ -88,7 +85,7 @@ export default defineConfig({
           // 打包后文件名
           entryFileNames: '[name].js',
           // 让打包目录和我们的组件库目录对应
-          preserveModules: true,
+          // preserveModules: true,
           exports: 'named',
           // 配置打包根目录
           dir: './hope/lib/lib'

@@ -3,10 +3,13 @@ import App from './App.vue'
 import router from './router'
 
 //TODO 为什么浏览器报错  not provide an export named 'default' https://stackoverflow.com/questions/71022803/the-requested-module-does-not-provide-an-export-named-default-error-but
-import MyButton from '@XY/components/hope/h/lib/packages/components/src/component/myButton/index.mjs'
-import '@XY/components/hope/h/style/component/myButton/button.css'
 
-import MyComponents from '@XY/components'
+
+// import MyComponents from '@XY/components'
+// import '@XY/components/hope/h/lib/style.css'
+
+import MyButton from '@XY/components/hope/h/lib/myButton'
+import '@XY/components/hope/h/style/myButton/button.css'
 
 import './assets/main.css'
 
