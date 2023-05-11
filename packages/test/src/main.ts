@@ -8,8 +8,8 @@ import router from './router'
 // import MyComponents from '@XY/components'
 // import '@XY/components/hope/h/lib/style.css'
 
-import MyButton from '@XY/components/hope/h/lib/myButton'
-import '@XY/components/hope/h/style/myButton/button.css'
+import { MyButton } from '@XY/components'
+import '@XY/components/hope/style/myButton/button.css'
 
 import './assets/main.css'
 

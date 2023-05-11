@@ -15,7 +15,7 @@ export default defineConfig({
     VueSetupExtend(),
     dts({
       entryRoot: './component',
-      outputDir: ['./hope/h/type', './hope/lib/type']
+      outputDir: ['./hope/type']
       //指定使用的tsconfig.json为我们整个项目根目录下，如果不配置，你也可以在components下新建tsconfig.json
     }),
     {

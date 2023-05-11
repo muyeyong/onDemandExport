@@ -18,8 +18,7 @@ export const buildStyle = () => {
   return src(`${componentPath}/component/**/*.less`)
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(dest(join(componentPath, 'hope', 'lib', 'style'))) // `${componentPath}/hope/lib/style`)
-    .pipe(dest(join(componentPath, 'hope', 'h', 'style'))) // ${componentPath}/hope/h/style
+    .pipe(dest(join(componentPath, 'hope', 'style'))) 
 };
 
 // 打包组件
@@ -48,8 +47,6 @@ const rename = () => {
       })
       resolve(true)
     }, 2000)
-    
-    
   })
 }
 
