@@ -24,7 +24,15 @@ export default defineConfig({
         allowOverrides: false,
         include: [/\.vue$/, /\.vue\?vue/],
         exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
-        resolvers: [AntDesignVueResolver()]
+        resolvers: [
+          AntDesignVueResolver(), 
+          (name) => {
+            console.log('name', name)
+            if (name.startsWith('My')) {
+              console.log('2333')
+            }
+          }
+      ]
       }),
       apply: 'build'
     }],
