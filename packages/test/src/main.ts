@@ -8,8 +8,8 @@ import router from './router'
 // import MyComponents from '@XY/components'
 // import '@XY/components/hope/h/lib/style.css'
 
-import { MyButton } from '@XY/components'
-import '@XY/components/hope/style/myButton/button.css'
+// import { MyButton } from '@XY/components'
+// import '@XY/components/hope/style/myButton/button.css'
 
 import './assets/main.css'
 
@@ -17,6 +17,6 @@ const app = createApp(App)
 
 app.use(router)
 
-app.use(MyButton)
+// app.use(MyButton)
 
 app.mount('#app')

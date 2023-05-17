@@ -77,7 +77,7 @@ export default defineConfig({
           // preserveModules: true,
           exports: 'named',
           // 配置打包根目录
-          dir: './hope/h/lib'
+          dir: './hope/es'
         },
         {
           // 打包格式
@@ -88,7 +88,7 @@ export default defineConfig({
           // preserveModules: true,
           exports: 'named',
           // 配置打包根目录
-          dir: './hope/lib/lib'
+          dir: './hope/lib'
         }
       ]
     }
