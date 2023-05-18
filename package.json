@@ -2,6 +2,8 @@
   "name": "ondemandexport",
   "version": "0.0.0",
   "private": true,
+  "keywords": ["vite", "vue3"],
+  "description": "基于vite和vue3按需导入的组件库",
   "scripts": {
     "preview": "vite preview",
     "build": "gulp -f script/build/index.ts",
