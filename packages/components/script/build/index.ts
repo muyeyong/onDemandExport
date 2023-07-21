@@ -8,6 +8,7 @@ import autoprefixer from "gulp-autoprefixer";
 
 // 删除hope(dist)
 export const removeDist = () => {
+  console.log('2222')
   return delPath(`${pkgPath}/hope`);
 };
 

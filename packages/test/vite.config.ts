@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-
+import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
@@ -30,7 +30,15 @@ export default defineConfig({
           AutoExport()
       ]
       })
-    }],
+    },
+    visualizer({
+      filename: './node_modules/.cache/visualizer/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true
+    })
+  ],
+   
     build: {
       minify: false,
       lib: {

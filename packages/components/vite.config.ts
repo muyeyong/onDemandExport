@@ -1,6 +1,8 @@
 import { fileURLToPath, URL } from 'node:url'
 import { globSync } from 'glob'
 import path from 'node:path';
+// @ts-ignore
+import DefineOptions from 'unplugin-vue-define-options/vite';
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -35,6 +37,7 @@ export default defineConfig({
       }),
       apply: 'build'
     },
+    DefineOptions(),
     {
       name: 'style',
       generateBundle(config, bundle) {
@@ -56,17 +59,18 @@ export default defineConfig({
     minify: false,
     outDir: './hope',
     lib: {
-      entry: './component/index.ts',
+      entry: './index.ts',
+      name: 'myComponent'
     },
     rollupOptions: {
       external: ['cheerio', 'vue', 'vue-router'],
-      input: Object.fromEntries(globSync(['component/**/*.ts', 'component/*.ts']).map(file => [
-        path.relative(
-          'component',
-          file.slice(0, file.length - path.extname(file).length)
-        ),
-        fileURLToPath(new URL(file, import.meta.url))
-      ])),
+      // input: Object.fromEntries(globSync(['component/**/*.ts', 'component/*.ts']).map(file => [
+      //   path.relative(
+      //     'component',
+      //     file.slice(0, file.length - path.extname(file).length)
+      //   ),
+      //   fileURLToPath(new URL(file, import.meta.url))
+      // ])),
       output: [
         {
           // 打包格式
@@ -74,10 +78,11 @@ export default defineConfig({
           // 打包后文件名
           entryFileNames: '[name].mjs',
           // 让打包目录和我们的组件库目录对应
-          // preserveModules: true,
+          preserveModules: true,
+          preserveModulesRoot: 'component',
           exports: 'named',
           // 配置打包根目录
-          dir: './hope/es'
+          dir: './hope/es',
         },
         {
           // 打包格式
@@ -85,7 +90,8 @@ export default defineConfig({
           // 打包后文件名
           entryFileNames: '[name].js',
           // 让打包目录和我们的组件库目录对应
-          // preserveModules: true,
+          preserveModules: true,
+          preserveModulesRoot: 'component',
           exports: 'named',
           // 配置打包根目录
           dir: './hope/lib'

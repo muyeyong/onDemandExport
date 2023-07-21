@@ -2,8 +2,7 @@
   "name": "@XY/components",
   "version": "1.0.0",
   "description": "",
-  "main": "hope/es/index.mjs",
-  "type": "module",
+  "main": "./index.ts",
   "scripts": {
     "build-only": "vite build",
     "build": "run-p build-only",

@@ -13,9 +13,9 @@ export default function MyComponentResolve(): ComponentResolver{
         resolve: (name: string) => {
             if (name.startsWith('My')) {
                 const importName = name
-                const path = `@XY/components/hope/es`
+                const path = `@XY/components/hope/es/${importName}`
                 return {
-                    name: importName,
+                    name: importName+'Vue',
                     from: path,
                     sideEffects: getSideEffects(importName)
                 }

@@ -6,3 +6,7 @@ MyInputVue.install = function (app: App) {
 }
 
 export default MyInputVue
+
+export {
+  MyInputVue
+}

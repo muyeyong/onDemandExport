@@ -6,3 +6,7 @@ MyButtonVue.install = function (app: App) {
 }
 
 export default MyButtonVue
+
+export {
+  MyButtonVue
+}
