@@ -26,8 +26,8 @@ export default defineConfig({
         include: [/\.vue$/, /\.vue\?vue/],
         exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
         resolvers: [
-          AntDesignVueResolver(), 
-          AutoExport()
+          AntDesignVueResolver()
+          // AutoExport()
       ]
       })
     },

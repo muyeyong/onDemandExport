@@ -1,12 +1,10 @@
 <template>
     <div class="myButton">
-        <a-button type="primary">我的按钮</a-button>
-        <Input />
+        <button>我的按钮</button>
     </div>
 </template>
     
 <script setup lang='ts' name="MyButton">
-import Input from '../myInput/my-input.vue'
 
 console.log("MyButton")
     

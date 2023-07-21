@@ -1,16 +1,16 @@
 <template>
-    <div class="myInput">
-        <input placeholder="Basic usage" />
+    <div class="MyOther">
+        <p>MyOther</p>
     </div>
 </template>
     
-<script setup lang='ts' name="MyInput">
+<script setup lang='ts' name="MyOther">
     console.log('MyInput')
 </script>
     
 <style scoped>
-@import url('./input.less');
-    .myInput {
+
+    .MyOther {
         margin: 10px;
         background-color: pink;
     }

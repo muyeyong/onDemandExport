@@ -1,12 +1,12 @@
 <script setup lang="ts">
-
-
+import { MyButtonVue } from '@XY/components'
 </script>
 
 <template>
   <header>
+    <MyButtonVue />
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    <MyButton />
+    
     <div class="wrapper">
     
 
