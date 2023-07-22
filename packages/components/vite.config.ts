@@ -59,7 +59,7 @@ export default defineConfig({
     minify: false,
     outDir: './hope',
     lib: {
-      entry: './index.ts',
+      entry: './component/index.ts',
       name: 'myComponent'
     },
     rollupOptions: {

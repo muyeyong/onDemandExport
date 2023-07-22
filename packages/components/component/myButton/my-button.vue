@@ -5,8 +5,10 @@
 </template>
     
 <script setup lang='ts' name="MyButton">
+import { cloneDeep } from 'lodash'
 
-console.log("MyButton")
+console.log("MyButton v2")
+console.log(cloneDeep({ a: 'hhhh'}))
     
 </script>
     

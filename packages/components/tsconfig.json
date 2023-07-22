@@ -4,12 +4,14 @@
     "env.d.ts",
     "component/**/*",
     "component/**/*.vue",
-    "script/**/*.ts"
+    "script/**/*.ts",
   ],
   // "emitDeclarationOnly": true, // 只输出声明文件(ts 产物)
   // "declaration": true, // 自动生成声明文件
   // "declarationDir": "dist", // 声明文件生成的目录
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "module": "esnext",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -20,7 +22,7 @@
     // "strict": true,
     // // 目标代码
     "target": "esnext",
-    "module": "commonjs",
+    // "module": "commonjs",
     // // 生成代码使用的模块化
     // "module": "ESNext",
     // // 跳过对整个库进行类型检测，而仅仅检测你用到的类型

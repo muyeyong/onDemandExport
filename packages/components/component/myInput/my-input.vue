@@ -5,7 +5,11 @@
 </template>
     
 <script setup lang='ts' name="MyInput">
-    console.log('MyInput')
+import { cloneDeep } from 'lodash'
+    console.log('MyInput v2')
+
+    console.log(cloneDeep({ a: 1 }))
+
 </script>
     
 <style scoped>
